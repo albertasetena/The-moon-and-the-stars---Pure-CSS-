@@ -1,0 +1,144 @@
+/* The Sky */
+
+.sky-body
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(180deg,#1e1e7e,rgba(139, 143, 153, 0.993));
+    height: 100%;
+}
+.sky-body .moon
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url('moooon.png') no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    left: 880px;
+    top: 30px;
+    animation-name: moon;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moon {
+    50%
+    {
+        opacity: 0.5;
+    }
+}
+.sky-body #star1
+{
+    position: absolute;
+    top: 300px;
+    left: 800px;
+    background-color: #ffc;
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+    transform: rotate(45deg) scale(0.3);
+    animation-name: star1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+} 
+.sky-body #star1::before
+{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: #ffc;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+
+}
+.sky-body #star2
+{
+    position: absolute;
+    top: 200px;
+    right: 750px;
+    background-color: #ffc;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg) scale(0.5);
+    animation-name: star2;
+    opacity: 0.6;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+} 
+.sky-body #star2::before
+{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: #ffc;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+
+}
+@keyframes star1 
+{
+    30%
+    {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+}
+@keyframes star2 
+{
+    30%
+    {
+        
+        transform: scale(0.8);
+        opacity: 1;
+    }
+}
+.sky-body #alber
+{
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    top: 140px; 
+    color: #ffc;
+    transform: scale(1.3);
+
+}
+.sky-body #alber h4
+{
+    position: relative;
+    animation-name: asetena-krah;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border: 1px solid #ccc;
+    width: 250px;
+    padding: 1px;
+    border-radius: 10px;
+}
+@keyframes asetena-krah {
+    0%
+    {
+        transform: scale(0.8);
+        top: 0px;
+        color: #ccc;
+    }
+    50%
+    {
+        transform: scale(0.8);
+        top: 15px;
+        color: #ccc;
+    }
+    100%
+    {
+        transform: scale(0.8);
+        top: 0px;
+        color: #ccc;
+    }
+}
